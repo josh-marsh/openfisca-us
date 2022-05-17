@@ -1,0 +1,16 @@
+description: State sales tax rate.
+MA:
+  prepared_food:
+    2022-01-01: 0.07
+  metadata:
+    reference:
+      - title: title
+        href: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter62/Section4
+metadata:
+  unit: /1
+  period: year
+  breakdown: [state_code, consumption_category]
+  name: state_sales_tax_rate
+  label: State sales tax rate
+
+# Note: https://github.com/PolicyEngine/openfisca-us-data/blob/master/openfisca_us_data/datasets/ce/emission_coefficients.yaml
