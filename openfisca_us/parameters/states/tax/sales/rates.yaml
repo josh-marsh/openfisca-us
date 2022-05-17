@@ -1,11 +1,67 @@
 description: State sales tax rate.
 MA:
-  prepared_food:
+  airfare:
+    2022-01-01: 0.0625
+  alcohol:
+    2022-01-01: 0.0625
+  education:
+    2022-01-01: 0.0625
+  auto_insurance:
+    2022-01-01: 0.0625
+  autos:
+    2022-01-01: 0.0625
+  books:
+    2022-01-01: 0.0625
+  charity:
+    2022-01-01: 0.0625
+  clothes:
+    2022-01-01: 0.0625
+  electricity:
+    2022-01-01: 0.0625
+  food_at_home:
+    2022-01-01: 0.0625
+  food_at_restaurants:
     2022-01-01: 0.07
+  furnishings:
+    2022-01-01: 0.0625
+  gasoline:
+    2022-01-01: 0.0625
+  health:
+    2022-01-01: 0.0625
+  home_heating_fuel:
+    2022-01-01: 0.0625
+  household_supplies:
+    2022-01-01: 0.0625
+  life_insurance:
+    2022-01-01: 0.0625
+  mass_transit:
+    2022-01-01: 0.0625
+  natural_gas:
+    2022-01-01: 0.0625
+  other_car_services:
+    2022-01-01: 0.0625
+  other_dwelling_rentals:
+    2022-01-01: 0.0625
+  other_recreation:
+    2022-01-01: 0.0625
+  recreation_and_sports:
+    2022-01-01: 0.0625
+  telephone:
+    2022-01-01: 0.0625
+  tentant_occupied_dwellings:
+    2022-01-01: 0.0625
+  tobacco:
+    2022-01-01: 0.0625
+  water:
+    2022-01-01: 0.0625
   metadata:
     reference:
-      - title: title
-        href: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter62/Section4
+      - title: Massachusetts Mass.gov sales and use tax page
+        href: https://www.mass.gov/guides/sales-and-use-tax
+      - title: Massachusetts Mass.gov organizations exempt from sales tax
+        href: https://www.mass.gov/administrative-procedure/ap-101-organizations-exempt-from-sales-tax
+      - title: Salestaxhandbook.com Massachusetts sales tax exemptions
+        href: https://www.salestaxhandbook.com/massachusetts/sales-tax-exemptions
 metadata:
   unit: /1
   period: year
