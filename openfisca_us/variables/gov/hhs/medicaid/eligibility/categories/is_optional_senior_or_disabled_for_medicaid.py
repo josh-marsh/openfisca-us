@@ -17,19 +17,19 @@ class is_optional_senior_or_disabled_for_medicaid(Variable):
         assets = tax_unit.sum(personal_assets)
         ma = parameters(
             period
-        ).hhs.medicaid.eligibility.categories.senior_or_disabled
+        ).gov.hhs.medicaid.eligibility.categories.senior_or_disabled
         is_senior_or_disabled = person("is_ssi_aged_blind_disabled", period)
         is_joint = person.tax_unit("tax_unit_is_joint", period)
         state = person.household("state_code_str", period)
         income_limit = where(
             is_joint,
-            ma.income.limit.couple[state],
-            ma.income.limit.individual[state],
+            ma.income.limit.couple[state] * MONTHS_IN_YEAR,
+            ma.income.limit.individual[state] * MONTHS_IN_YEAR,
         )
         income_disregard = where(
             is_joint,
-            ma.income.disregard.couple[state],
-            ma.income.disregard.individual[state],
+            ma.income.disregard.couple[state] * MONTHS_IN_YEAR,
+            ma.income.disregard.individual[state] * MONTHS_IN_YEAR,
         )
         asset_limit = where(
             is_joint,

@@ -5,6 +5,239 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.76.1] - 2022-06-20 13:24:54
+
+### Changed
+
+- Reorganize tax credits to skip the refundable/non-refundable distinction.
+- Reorganize parameters to layer under gov.
+
+## [0.76.0] - 2022-06-19 16:59:40
+
+### Added
+
+- Basic income phase-out parameters, logic and testing.
+
+## [0.75.2] - 2022-06-17 16:36:16
+
+### Fixed
+
+- Payroll taxable wages deduct pension contributions rather than adding them.
+- Market income includes missing capital gains, farm, illicit and rental income.
+
+## [0.75.1] - 2022-06-16 16:58:09
+
+### Changed
+
+- Replace `phaseout` with `phase_out` or `phase-out` in variables and text.
+- Reorganize variables into their own files.
+
+## [0.75.0] - 2022-06-16 16:28:07
+
+### Added
+
+- Basic income amounts for young children and young adults.
+- Flat tax on AGI.
+
+### Fixed
+
+- Three-digit zipcodes are generated with a fixed seed.
+- Housing subsidies correctly included in benefits.
+
+## [0.74.2] - 2022-06-15 21:45:58
+
+### Fixed
+
+- A bug causing the CDCC to have negative relevant expenses.
+
+## [0.74.1] - 2022-06-13 21:56:08
+
+### Fixed
+
+- Childcare expenses are now correctly loaded from the CPS.
+
+## [0.74.0] - 2022-06-13 15:06:03
+
+### Added
+
+- New York State household credit.
+
+## [0.73.2] - 2022-06-12 20:17:09
+
+### Fixed
+
+- Point `cdcc_refund` to `cdcc` not the deprecated `c33200`.
+
+## [0.73.1] - 2022-06-10 13:24:12
+
+### Fixed
+
+- A bug causing itemisation logic to fail.
+
+## [0.73.0] - 2022-06-09 03:20:13
+
+### Added
+
+- Housing assistance and dependent variables.
+
+## [0.72.3] - 2022-06-08 10:45:48
+
+### Changed
+
+- Breakdowns always specified as a list.
+
+## [0.72.2] - 2022-06-08 05:07:17
+
+### Added
+
+- Metadata for MA policy.
+
+## [0.72.1] - 2022-06-07 20:27:48
+
+### Fixed
+
+- Deduct government retirement contributions from MA taxable income on a per-person basis.
+
+## [0.72.0] - 2022-06-07 18:04:31
+
+### Added
+
+- New York State EITC.
+- Longer history for the Massachusetts rental tax deduction.
+
+## [0.71.2] - 2022-06-07 09:54:21
+
+### Fixed
+
+- Medicaid benefit value per state.
+
+## [0.71.1] - 2022-06-06 16:15:48
+
+### Changed
+
+- Reorganized state documentation.
+
+### Fixed
+
+- Entered rent person-level in documentation to align with latest package update.
+
+## [0.71.0] - 2022-06-06 13:50:33
+
+### Added
+
+- Massachusetts State income tax.
+
+## [0.70.3] - 2022-06-02 17:03:08
+
+### Fixed
+
+- A bug causing UC- and SS-related MAGI to incorrectly overcount loss deductions.
+
+## [0.70.2] - 2022-06-02 17:01:01
+
+### Changed
+
+- Applied new openfisca-tools helper function `index_` to speed up SLSPC calculations.
+
+## [0.70.1] - 2022-06-02 16:51:48
+
+### Fixed
+
+- Fix EITC bug which applied the phase-out after, instead of before, the phase-in.
+
+## [0.70.0] - 2022-06-02 11:44:25
+
+### Changed
+
+- Apply consistent CTC young child formula to all years.
+- Move CTC variables into their own files and other minor refactoring.
+
+### Fixed
+
+- Limit excess of Social Security taxes over EITC for refundable CTC to taxpayers with a minimum number of children.
+
+## [0.69.3] - 2022-06-02 03:24:39
+
+### Added
+
+- New `taxsim_tfica` variable for testing.
+
+## [0.69.2] - 2022-06-01 05:49:06
+
+### Fixed
+
+- Typo in SSI notebook.
+
+## [0.69.1] - 2022-06-01 04:50:12
+
+### Added
+
+- New `tax_unit_ssi` variable.
+- Example of single parent with two disabled children in SSI documentation notebook.
+
+### Fixed
+
+- Zeroed out `premium_tax_credit` in Massachusetts example notebook.
+
+## [0.69.0] - 2022-05-31 17:31:13
+
+### Added
+
+- SSI deeming rules.
+
+## [0.68.1] - 2022-05-30 22:40:36
+
+### Fixed
+
+- A bug causing the CDCC to not cap at the two-child childcare max expenses.
+
+## [0.68.0] - 2022-05-28 06:59:45
+
+### Added
+
+- EITC parameters for 2017 and 2018.
+
+## [0.67.0] - 2022-05-26 14:10:48
+
+### Added
+
+- CDCC integration tests.
+
+### Changed
+
+- Re-implemented CDCC according to the U.S. code.
+
+## [0.66.1] - 2022-05-24 15:20:46
+
+### Added
+
+- WIC by earnings example in docs.
+
+### Fixed
+
+- Made WIC categorical eligibility person-level and more accurate.
+- Pointed TANF maximum benefit variable to the correct parameter.
+- Bug preventing tax_unit_childcare_expenses from being calculated.
+
+## [0.66.0] - 2022-05-19 12:47:08
+
+### Added
+
+- MaritalUnit entity.
+- Massachusetts state supplement.
+
+## [0.65.0] - 2022-05-19 11:54:27
+
+### Added
+
+- WIC takeup and nutritional risk imputations.
+
+## [0.64.1] - 2022-05-17 22:49:48
+
+### Fixed
+
+- Corrected EITC phase-out start values for 2020 and 2021.
+
 ## [0.64.0] - 2022-05-16 20:12:47
 
 ### Changed
@@ -844,6 +1077,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+[0.76.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.76.0...0.76.1
+[0.76.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.75.2...0.76.0
+[0.75.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.75.1...0.75.2
+[0.75.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.75.0...0.75.1
+[0.75.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.74.2...0.75.0
+[0.74.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.74.1...0.74.2
+[0.74.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.74.0...0.74.1
+[0.74.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.73.2...0.74.0
+[0.73.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.73.1...0.73.2
+[0.73.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.73.0...0.73.1
+[0.73.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.72.3...0.73.0
+[0.72.3]: https://github.com/PolicyEngine/openfisca-us/compare/0.72.2...0.72.3
+[0.72.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.72.1...0.72.2
+[0.72.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.72.0...0.72.1
+[0.72.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.71.2...0.72.0
+[0.71.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.71.1...0.71.2
+[0.71.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.71.0...0.71.1
+[0.71.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.70.3...0.71.0
+[0.70.3]: https://github.com/PolicyEngine/openfisca-us/compare/0.70.2...0.70.3
+[0.70.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.70.1...0.70.2
+[0.70.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.70.0...0.70.1
+[0.70.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.69.3...0.70.0
+[0.69.3]: https://github.com/PolicyEngine/openfisca-us/compare/0.69.2...0.69.3
+[0.69.2]: https://github.com/PolicyEngine/openfisca-us/compare/0.69.1...0.69.2
+[0.69.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.69.0...0.69.1
+[0.69.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.68.1...0.69.0
+[0.68.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.68.0...0.68.1
+[0.68.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.67.0...0.68.0
+[0.67.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.66.1...0.67.0
+[0.66.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.66.0...0.66.1
+[0.66.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.65.0...0.66.0
+[0.65.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.64.1...0.65.0
+[0.64.1]: https://github.com/PolicyEngine/openfisca-us/compare/0.64.0...0.64.1
 [0.64.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.63.0...0.64.0
 [0.63.0]: https://github.com/PolicyEngine/openfisca-us/compare/0.62.3...0.63.0
 [0.62.3]: https://github.com/PolicyEngine/openfisca-us/compare/0.62.2...0.62.3
